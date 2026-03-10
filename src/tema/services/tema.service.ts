@@ -50,7 +50,7 @@ export class TemaService{
   }
 
   async create(tema: Tema): Promise<Tema>{
-    // INSERT INTO tb_temas (descição) VALUES (?, ?);
+    
     return this.temaRepository.save(tema);
   }
 
@@ -61,10 +61,7 @@ export class TemaService{
 
     await this.findById(tema.id);
 
-    // UPDATE tb_temas SET tema = ?, 
-    // texto = ? , 
-    // data = CURRENT_TIMESTAMP()
-    // WHERE id = ?;
+  
     return this.temaRepository.save(tema);
   }
 
