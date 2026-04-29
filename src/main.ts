@@ -20,7 +20,11 @@ async function bootstrap() {
 
   app.useGlobalPipes(new ValidationPipe());
 
-  app.enableCors();
+  app.enableCors({
+    origin: 'blogpessoal-react-z9xf.vercel.app', 
+    methods: 'GET,POST,PUT,DELETE', 
+    allowedHeaders: 'Content-Type, Authorization', 
+  });
   
   await app.listen(process.env.PORT ?? 4000);
 }
