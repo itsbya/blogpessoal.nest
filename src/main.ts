@@ -9,7 +9,7 @@ async function bootstrap() {
   const config = new DocumentBuilder()
   .setTitle('Blog Pessoal')
   .setDescription('Projeto Blog Pessoal')
-  .setContact("Ana Beatriz Carvalho","https://github.com/itsbya","anabeatrizcarvalhoesmailePF@gmail.com")
+  .setContact("Ana Beatriz Carvalho","https://itsbya.github.io/portfolio_pessoal/","anabeatrizcarvalhoesmailePF@gmail.com")
   .setVersion('1.0')
   .addBearerAuth()
   .build();
@@ -21,7 +21,7 @@ async function bootstrap() {
   app.useGlobalPipes(new ValidationPipe());
 
   app.enableCors({
-    origin: 'blogpessoal-react-z9xf.vercel.app', 
+    origin: 'https://blogpessoal-react-z9xf.vercel.app', 
     methods: 'GET,POST,PUT,DELETE', 
     allowedHeaders: 'Content-Type, Authorization', 
   });
